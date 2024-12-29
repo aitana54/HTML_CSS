@@ -1,0 +1,36 @@
+
+/*Parámetros body*/
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    height: 100vh;
+    background-color: rgb(207, 95, 255);
+    overflow: hidden;  /*El desbordamiento se recorta y el resto del contenido será invisible.*/
+}
+
+
+/*SPINNER*/
+.spinner{
+    width: 50px;
+    height: 50px;
+    border: 5px solid black;
+    border-left-color: transparent;
+    border-radius: 50%;
+    animation: rotarYMover 5s ease-out forwards; /*Aplico la animación al spinner, la duración y el modo en como lo hace*/
+}
+
+
+
+/*reglas para la animación*/
+@keyframes rotarYMover {
+    0% {/*estado inicial*/
+        transform: translateX(-75vh)rotate(0deg);/*ubicación al principio y rotación*/
+    }
+    100% {/*estado final*/
+        transform: translateX(calc(100vw - 60px))rotate(1080deg);/*ubicación final y rotación*/
+    }
+}
+

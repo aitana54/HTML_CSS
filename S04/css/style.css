@@ -1,0 +1,68 @@
+/* Defino las variables de color a la raiz (root) */
+:root {
+    --color-background-azul: rgb(84,120,193); 
+    --color-text-blanco: white;
+    --color-text-negro: black;
+    --color-text-azulClaro: rgba(210,223,251, 0.8);
+    --color-text-section-azul:rgb(73,105,169);
+    --color-background-negro:rgb(10,15,24);
+}
+/*Aplica a todo*/
+*{
+    font-weight: 400;
+}
+
+/*elemento raiz*/
+html{
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.1rem;
+    
+
+}
+/*element header*/
+header{
+    background-color: var(--color-background-azul);
+    color: var(--color-text-blanco);
+}
+
+/* Inicio secciones*/
+section{
+    background-color: var(--color-text-azulClaro);
+    color: var(--color-text-section-azul);
+}
+
+
+
+#welc:hover{/*:hover para que al pasar el raton por la seccion cambie de color*/
+    color: var(--color-text-blanco);
+    background-color: var(--color-background-negro);
+}
+/* Final secciones*/
+
+article:hover{
+    color: var(--color-text-blanco);
+    background-color: var(--color-background-negro);
+}
+
+h3{
+    font-size: 1.3rem;
+}
+
+a:active{
+    color: var(--color-text-negro);
+}
+
+span{
+    font-weight: bold;
+}
+
+article:last-of-type > p{
+    font-style: italic;
+}
+
+
+footer{
+    background-color: var(--color-background-azul);
+    color: var(--color-text-blanco);
+}
+

@@ -1,0 +1,78 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+h1 {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+/* Grid Principal */
+.grid-container {
+  display: grid;
+  grid-template-areas:
+  "item1 item1 item1"
+  "item2 item3 item4"
+  "item5 item5 item5";
+  grid-template-columns: 1fr 2fr 1fr;
+  gap: 10px;
+}
+/* Nombres de áreas */
+.item-1 {
+  grid-area: item1;
+}
+
+.item-2 {
+  grid-area: item2;
+}
+
+.item-3 {
+  grid-area: item3;
+}
+
+.item-4 {
+  grid-area: item4;
+  align-self: self-end; /* Espacio sobre el item 4 */
+}
+
+.item-5 {
+  grid-area: item5;
+}
+
+.grid-item {
+  background-color: lightsalmon;
+  padding: 3rem;
+
+}
+
+/* Subgrid */
+
+.grid-container-2 {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(1rem, 4fr));
+  gap: 1rem;
+  margin-top: 10px;
+}
+
+.sub-item {
+  background-color: rgb(253, 213, 197);
+  padding: 1rem;
+  border-radius: 5px;
+}
+
+
+/* Vista para pantallas más ajustadas */
+@media (max-width: 1300px) {
+  .grid-container {
+    grid-template-columns:  repeat(3, minmax(1rem, 3fr)); /* Apilar elementos verticalmente */
+  }
+
+  .grid-item {
+    padding: 1.5rem; /* Reducir el padding para aprovechar mejor el espacio */
+  }
+
+  .grid-container-2 {
+    grid-template-columns: repeat(3, minmax(1rem, 1fr)); /* Subgrid en una columna */
+  }
+}

@@ -1,0 +1,79 @@
+:root {
+  --primary-color: #EA5D40;
+  --second-color: #FCEEEB;
+  --third-color: #752E20;
+  --fourth-color: #2E120C;
+  --fifth-color: orange;
+  --wrapper-width: 90vw;
+}
+* {
+  box-sizing: border-box;
+}
+
+html{
+  scroll-behavior: smooth; /* Desplazamiento suave*/
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  height: 2000px;
+}
+
+/*Header fijado en la parte superior*/
+
+header {
+  background-color: var(--primary-color);
+  padding: 1rem 0;
+  margin-bottom: 2rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index:auto;
+}
+h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  color: var(--second-color);
+  text-align: center;
+}
+h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.wrapper {
+  width: var(--wrapper-width);
+  margin: 0 auto;
+  padding-top: 6rem; /* Añado espacio arriba para evitar que el contenido se solape con el header fijado*/
+}
+.up-btn {
+  display: inline-block;
+  text-decoration: none;
+  color: var(--third-color);
+  height: 5rem;
+  width: 5rem;
+  background-color: var(--fifth-color);
+  border-radius: 100%;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.3s ease;
+}
+
+.up-btn:hover {
+  background: radial-gradient(circle, var(--second-color), var(--primary-color), var(--third-color));
+}
+.text-center {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+

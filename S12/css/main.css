@@ -1,0 +1,36 @@
+/*Estilos generales para centrar todo*/
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background-color: blue;
+}
+
+/*Contenedor estrella*/
+.estrella {
+    position: relative; /*Necesario para poner el ::after*/
+    width: 0;
+    height: 0;
+}
+
+/* Primer triangulo (inferior)*/
+.estrella {
+    border-left: 100px solid transparent;
+    border-right: 100px solid transparent;
+    border-bottom: 200px solid goldenrod;
+}
+
+/*Segundo triangulo(superior)*/
+.estrella::after {
+    content: '';/* Crea un pseudo-elemento vacío. */
+    position: absolute;/* Permite posicionar el pseudo-elemento respecto a .estrella. */
+    top: 50px;
+    left: -100px;
+    width: 0;
+    height: 0;
+    border-left: 100px solid transparent;
+    border-right: 100px solid transparent;
+    border-top: 200px solid goldenrod;
+}

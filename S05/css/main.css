@@ -1,0 +1,47 @@
+:root {
+  --primary-color: #dbcf5c;
+}
+
+html {
+  font-size: 1.5rem;
+}
+/*Elementos que afectan a la linea amarilla debajo del h1*/
+.line{
+  border-radius: 5%;
+  box-sizing: content-box;
+  border-bottom: var(--primary-color) 3px solid;
+  margin-top: -20px;
+  margin-left: 4.5%;
+  margin-right: 6.5%;
+  margin-bottom: 40px;
+  border-top-left-radius: 0%;
+}
+
+h1 {
+  font-size: 2rem;
+  font-weight: bold;
+  color: var(--primary-color);
+  padding: 30px 0 5px 10px;
+
+}
+
+h3 {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+/*Para hacer el efecte parallax*/
+.parallax{
+  width: 100vw;
+  height: 20vw;
+  background: url(/img/olive-oil_1920.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+}
+/*En caso de pasar por encima de la foto, se pondrá en blanco y negro*/
+.parallax:hover{
+  filter: grayscale(var(--value, 100%)); --value: 100%;
+}
+/*Grosor de los sections*/
+section{
+  padding: 50px 40px;
+}

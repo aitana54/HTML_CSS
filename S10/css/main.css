@@ -1,0 +1,110 @@
+/*Afecta todo el codigo*/
+* {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+/* Inicio contenedor general */
+    .contenedor{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+        text-align: center;
+        transition: background-color 0.3ms ease;
+    }
+
+    h1 {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+    }
+    
+    .icon {
+        width: 100px;
+        height: 100px;
+    }
+    
+    /* Ocultar por defecto */
+    #title, #icon {
+        display: block;
+    }
+
+/* Fin contenedor general */
+
+/*Tamaño dependiendo del contenido*/
+    /* Telefono */
+    @media screen and (max-width: 600px) {
+        body.container {
+        background-color: #ffeb3b;
+        }
+
+        #title::before {
+        
+        content: "Telefono";
+        }
+        
+        #icon {
+        display: block;
+        background-image: url('/icons/phone-icon.svg');
+        background-size: contain;
+        background-repeat: no-repeat;
+        }
+    }
+
+    /* Tablet */
+    @media screen and (min-width: 601px) and (max-width: 1024px) {
+        body.container {
+        background-color: #4caf50;
+        }
+        #title::before {
+        
+        content: "Tablet";
+        }
+        #icon {
+        display: block;
+        background-image: url('/icons/tablet-icon.svg');
+        background-size: contain;
+        background-repeat: no-repeat;
+        }
+    }
+
+    /* Portatil */
+    @media screen and (min-width: 1025px) and (max-width: 1440px) {
+        body.container {
+        background-color: #6a4caf;
+        }
+        #title::before {
+        
+        content: "Portatil";
+        }
+        #icon {
+        display: block;
+        background-image: url('/icons/laptop-icon.svg');
+        background-size: contain;
+        background-repeat: no-repeat;
+        height: 20vh;
+        width: 20vh;
+        }
+    }
+
+    /* Desktop */
+    @media screen and (min-width: 1441px) {
+        body.container {
+        background-color: #e23b6d;
+        
+        }
+        #title::before{
+        content: "Desktop";
+        }
+        #icon {
+        display: block;
+        background-image: url('/icons/desktop-icon.svg');
+        background-size: contain;
+        background-repeat: no-repeat;
+        height: 20vh;
+        width: 20vh;
+        }
+    }
+
